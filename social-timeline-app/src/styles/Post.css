@@ -1,0 +1,15 @@
+.post {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+    list-style: none;
+}
+
+.post-content {
+    font-size: 1.2rem;
+}
+
+.post-actions {
+    margin-top: 0.5rem;
+}
