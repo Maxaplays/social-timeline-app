@@ -1,6 +1,6 @@
 import React from "react";
 import LikeButton from "./LikeButton";
-import "../styles/Post.css";
+import "../styles/Post.scss";
 
 function calculateTimeSincePost(timestamp) {
   const currentTime = new Date();

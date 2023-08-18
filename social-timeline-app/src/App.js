@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"; // Import your CSS file if you have one
+import "./App.scss"; // Import your CSS file if you have one
 import Timeline from "./components/Timeline"; // Import the Timeline component
 
 function App() {

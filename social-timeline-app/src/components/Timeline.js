@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post"; // Import the Post component
-import "../styles/Timeline.css";
+import "../styles/Timeline.scss";
 
 function Timeline({ posts }) {
   return (

@@ -1,0 +1,18 @@
+@import "variables";
+.header {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.app {
+  background-color: $background-color;
+  font-family: $primary-font-family;
+}

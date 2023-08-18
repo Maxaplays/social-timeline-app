@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/LikeButton.css";
+import "../styles/LikeButton.scss";
 import * as IconsOutline from "@heroicons/react/24/outline";
 import * as IconsSolid from "@heroicons/react/24/solid";
 
