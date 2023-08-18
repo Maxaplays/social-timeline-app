@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css"; // Import your CSS file if you have one
 import Timeline from "./components/Timeline"; // Import the Timeline component
-import Post from "./components/Post"; // Import the Post component
 
 function App() {
   // Sample data for posts
