@@ -1,83 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss"; // Import your CSS file if you have one
 import Timeline from "./components/Timeline"; // Import the Timeline component
 
 function App() {
   // Sample data for posts
-  const currentTime = new Date("2023-08-18T14:17:00");
 
-  const posts = [
-    {
-      id: 1,
-      content: "Woof, world!",
-      author: "Buddy",
-      avatar: require("./assets/pfp1.jpg"),
-      timestamp: currentTime,
-    },
-    {
-      id: 2,
-      content: "Just taking a paw-some stroll in the park.",
-      author: "Charlie",
-      avatar: require("./assets/pfp2.jpg"),
-      timestamp: new Date(currentTime.getTime() - 5 * 60 * 1000), // 5 minutes ago
-    },
-    {
-      id: 3,
-      content: "Bark bark bark!",
-      author: "Luna",
-      avatar: require("./assets/pfp3.jpg"),
-      timestamp: new Date(currentTime.getTime() - 45 * 60 * 1000), // 45 minutes ago
-    },
-    {
-      id: 4,
-      content: "Pawsitively excited about React!",
-      author: "Max",
-      avatar: require("./assets/pfp4.jpg"),
-      timestamp: new Date(currentTime.getTime() - 1.5 * 60 * 60 * 1000), // 1.5 hours ago
-    },
-    {
-      id: 5,
-      content: "Ruff ruff ruff...",
-      author: "Daisy",
-      avatar: require("./assets/pfp5.jpg"),
-      timestamp: new Date(currentTime.getTime() - 4 * 60 * 60 * 1000), // 4 hours ago
-    },
-    {
-      id: 6,
-      content: "Sniffing around this app!",
-      author: "Rocky",
-      avatar: require("./assets/pfp6.jpg"),
-      timestamp: new Date(currentTime.getTime() - 10 * 60 * 60 * 1000), // 10 hours ago
-    },
-    {
-      id: 7,
-      content: "Coding like a fur-ninja!",
-      author: "Coco",
-      avatar: require("./assets/pfp7.jpg"),
-      timestamp: new Date(currentTime.getTime() - 16 * 60 * 60 * 1000), // 16 hours ago
-    },
-    {
-      id: 8,
-      content: "What a pawsome weather today!",
-      author: "Bailey",
-      avatar: require("./assets/pfp8.jpg"),
-      timestamp: new Date(currentTime.getTime() - 1 * 24 * 60 * 60 * 1000), // 1 day ago
-    },
-    {
-      id: 9,
-      content: "Sharing my favorite bone recipe!",
-      author: "Lola",
-      avatar: require("./assets/pfp9.jpg"),
-      timestamp: new Date(currentTime.getTime() - 5 * 24 * 60 * 60 * 1000), // 5 days ago
-    },
-    {
-      id: 10,
-      content: "Learning React is a tail-wagging experience!",
-      author: "Bentley",
-      avatar: require("./assets/pfp10.jpg"),
-      timestamp: new Date(currentTime.getTime() - 14 * 24 * 60 * 60 * 1000), // 14 days ago
-    },
-  ];
+  const [data, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const userResponse = await fetch("https://localhost:7005/api/User/all");
+      const postResponse = await fetch("https://localhost:7005/api/Post/all");
+
+      const userData = await userResponse.json();
+      const postData = await postResponse.json();
+      let postWithUserData = [];
+
+      for (let index = 0; index < userData.length; index++) {
+        let dataForEachPost = {
+          content: postData[index].description,
+          author: userData[index].username,
+          avatar: userData[index].avatarUrl,
+          timestamp: postData[index].timestamp["localDateTime"],
+          likeCount: postData[index].likeCount,
+        };
+        postWithUserData.push(dataForEachPost);
+      }
+
+      setPosts(postWithUserData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   return (
     <div className="app">
@@ -86,7 +44,7 @@ function App() {
       </header>
       <main className="main">
         <div className="timeline-container">
-          <Timeline posts={posts} />
+          <Timeline posts={data} />
         </div>
       </main>
       <footer className="footer">

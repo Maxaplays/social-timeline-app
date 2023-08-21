@@ -23,7 +23,7 @@ namespace socialAppBackend.Repository
 
         public List<Dictionary<string, object>> getAllUsers()
         {
-            var query = @"MATCH (u:User) RETURN u{ username: u.username, joinDate: u.joinDate, bio: u.bio, followers: u.followers, following: u.following, postCount: u.postCount }";
+            var query = @"MATCH (u:User) RETURN u{ username: u.username, joinDate: u.joinDate, bio: u.bio, followers: u.followers, following: u.following, postsCount: u.postsCount, avatarUrl: u.avatarUrl }";
             var result = _neo4jDataAccess.ExecuteReadDictionaryAsync(query, "u");
 
             return result.Result;
