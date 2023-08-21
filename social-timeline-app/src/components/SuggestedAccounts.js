@@ -7,7 +7,7 @@ function SuggestedAccounts({ suggestedAccounts }) {
       <h3>Suggested Accounts</h3>
       <ul className="account-list">
         {suggestedAccounts.map((account) => (
-          <li key={account.id} className="account">
+          <li className="account" key={account.author}>
             <img src={account.avatar} alt={`Avatar of ${account.author}`} />
             <div className="account-info">
               <h4>{account.author}</h4>

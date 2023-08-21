@@ -75,6 +75,7 @@ function Post({ post, userData }) {
       </div>
       <div className="post-actions">
         <LikeButton />
+        <span className="like-count">{post.likeCount} likes</span>
       </div>
     </li>
   );

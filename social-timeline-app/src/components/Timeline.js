@@ -7,7 +7,7 @@ function Timeline({ posts, userData }) {
     <div className="timeline">
       <ul className="post-list">
         {posts.map((post) => (
-          <Post key={post.id} post={post} userData={userData} />
+          <Post key={post.author} post={post} userData={userData} />
         ))}
       </ul>
     </div>
