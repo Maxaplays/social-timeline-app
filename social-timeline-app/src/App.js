@@ -56,7 +56,10 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>My Social App</h1>
+        <div className="header-container">
+          <img src="./logoDog.PNG" alt="Doggram logo"></img>
+          <h1>Doggram</h1>
+        </div>
       </header>
       <main className="main">
         <div className="timeline-container">
