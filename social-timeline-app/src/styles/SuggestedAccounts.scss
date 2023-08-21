@@ -1,0 +1,55 @@
+@import "../variables";
+.suggested-accounts {
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 300px;
+  margin: 1em 20%;
+  color: $font-color-light;
+  background-color: $background-color-darker;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .account-list {
+    list-style: none;
+    padding: 0;
+
+    .account {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .account-info {
+        margin: 0 5px;
+        h4 {
+          margin: 0;
+          font-size: 1rem;
+        }
+
+        p {
+          margin: 5px 0;
+          font-size: 0.9rem;
+          color: $font-color-grayer;
+        }
+
+        button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

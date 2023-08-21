@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss"; // Import your CSS file if you have one
 import Timeline from "./components/Timeline"; // Import the Timeline component
+import SuggestedAccounts from "./components/SuggestedAccounts";
 
 function App() {
   // Sample data for posts
@@ -60,6 +61,9 @@ function App() {
       <main className="main">
         <div className="timeline-container">
           <Timeline posts={data} userData={userData} />
+        </div>
+        <div className="suggested-accounts-container">
+          <SuggestedAccounts suggestedAccounts={userData} />
         </div>
       </main>
       <footer className="footer">

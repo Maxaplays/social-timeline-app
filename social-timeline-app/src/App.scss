@@ -16,3 +16,17 @@
   background-color: $third-color;
   font-family: $primary-font-family;
 }
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.suggested-accounts-container {
+  width: 25%;
+  padding: 0 10px; /* Add some padding to the left and right */
+}
