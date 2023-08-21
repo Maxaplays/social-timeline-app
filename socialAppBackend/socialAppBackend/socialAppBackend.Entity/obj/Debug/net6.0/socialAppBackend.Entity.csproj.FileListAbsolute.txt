@@ -1,0 +1,11 @@
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\bin\Debug\net6.0\socialAppBackend.Entity.deps.json
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\bin\Debug\net6.0\socialAppBackend.Entity.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\bin\Debug\net6.0\socialAppBackend.Entity.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\socialAppBackend.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\socialAppBackend.Entity.AssemblyInfoInputs.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\socialAppBackend.Entity.AssemblyInfo.cs
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\socialAppBackend.Entity.csproj.CoreCompileInputs.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\socialAppBackend.Entity.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\refint\socialAppBackend.Entity.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\socialAppBackend.Entity.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Entity\obj\Debug\net6.0\ref\socialAppBackend.Entity.dll

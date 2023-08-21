@@ -1,0 +1,15 @@
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\bin\Debug\net6.0\socialAppBackend.Domain.deps.json
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\bin\Debug\net6.0\socialAppBackend.Domain.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\bin\Debug\net6.0\socialAppBackend.Domain.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\bin\Debug\net6.0\socialAppBackend.Entity.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\bin\Debug\net6.0\socialAppBackend.Entity.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.csproj.AssemblyReference.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.AssemblyInfoInputs.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.AssemblyInfo.cs
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.csproj.CoreCompileInputs.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.csproj.CopyComplete
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\refint\socialAppBackend.Domain.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\socialAppBackend.Domain.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Domain\obj\Debug\net6.0\ref\socialAppBackend.Domain.dll

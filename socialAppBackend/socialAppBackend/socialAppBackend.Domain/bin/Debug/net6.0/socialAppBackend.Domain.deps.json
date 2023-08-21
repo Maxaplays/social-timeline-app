@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "socialAppBackend.Domain/1.0.0": {
+        "dependencies": {
+          "socialAppBackend.Entity": "1.0.0"
+        },
+        "runtime": {
+          "socialAppBackend.Domain.dll": {}
+        }
+      },
+      "socialAppBackend.Entity/1.0.0": {
+        "runtime": {
+          "socialAppBackend.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "socialAppBackend.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "socialAppBackend.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

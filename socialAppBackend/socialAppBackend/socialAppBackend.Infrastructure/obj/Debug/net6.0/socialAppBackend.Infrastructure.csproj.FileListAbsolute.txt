@@ -1,0 +1,17 @@
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\bin\Debug\net6.0\socialAppBackend.Infrastructure.deps.json
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\bin\Debug\net6.0\socialAppBackend.Infrastructure.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\bin\Debug\net6.0\socialAppBackend.Infrastructure.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\bin\Debug\net6.0\socialAppBackend.Domain.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\bin\Debug\net6.0\socialAppBackend.Entity.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\bin\Debug\net6.0\socialAppBackend.Domain.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\bin\Debug\net6.0\socialAppBackend.Entity.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.AssemblyInfo.cs
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.csproj.CopyComplete
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\refint\socialAppBackend.Infrastructure.dll
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\socialAppBackend.Infrastructure.pdb
+C:\Users\rgmat\Desktop\social-app\socialAppBackend\socialAppBackend\socialAppBackend.Infrastructure\obj\Debug\net6.0\ref\socialAppBackend.Infrastructure.dll

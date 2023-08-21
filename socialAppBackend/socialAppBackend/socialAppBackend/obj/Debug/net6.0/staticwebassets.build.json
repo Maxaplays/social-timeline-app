@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "rVyrcORdBK5eIhA3yIbW9qLBDggOUnCM8ypiXOD/0qE=",
+  "Source": "socialAppBackend",
+  "BasePath": "_content/socialAppBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
