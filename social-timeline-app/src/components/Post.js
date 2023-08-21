@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import LikeButton from "./LikeButton";
 import "../styles/Post.scss";
+import Overlay from "./Overlay";
 
 function calculateTimeSincePost(timestamp) {
   const currentTime = new Date();
-  const timeDifference = currentTime - timestamp;
+  const parsedTimestamp = new Date(timestamp);
+  const timeDifference = currentTime - parsedTimestamp;
 
   const msInSecond = 1000;
   const msInMinute = msInSecond * 60;
@@ -28,8 +30,21 @@ function calculateTimeSincePost(timestamp) {
   }
 }
 
-function Post({ post }) {
+function Post({ post, userData }) {
   const timeSincePost = calculateTimeSincePost(post.timestamp);
+
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [targetButton, setTargetButton] = useState(null);
+
+  const openOverlay = (event) => {
+    setIsOverlayOpen(true);
+    setTargetButton(event.target);
+  };
+
+  const closeOverlay = () => {
+    setIsOverlayOpen(false);
+  };
+  const user = userData.find((user) => user.author === post.author);
 
   return (
     <li className="post">
@@ -39,11 +54,23 @@ function Post({ post }) {
             src={post.avatar}
             alt={`Profile of ${post.author}`}
             className="avatar"
+            onMouseEnter={openOverlay}
+            onMouseLeave={closeOverlay}
           />
+          <Overlay
+            isOpen={isOverlayOpen}
+            onClose={closeOverlay}
+            target={targetButton}
+            userData={user}
+          >
+            <h2>Overlay Content</h2>
+            <p>This is the content of the overlay.</p>
+          </Overlay>
           <small>{post.author}</small>
-          <span class="dot"></span>
+          <span className="dot"></span>
           <span className="timestamp">{timeSincePost}</span>
         </div>
+
         <p>{post.content}</p>
       </div>
       <div className="post-actions">

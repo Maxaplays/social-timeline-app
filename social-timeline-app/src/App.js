@@ -6,6 +6,7 @@ function App() {
   // Sample data for posts
 
   const [data, setPosts] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -19,6 +20,7 @@ function App() {
       const userData = await userResponse.json();
       const postData = await postResponse.json();
       let postWithUserData = [];
+      let showUserData = [];
 
       for (let index = 0; index < userData.length; index++) {
         let dataForEachPost = {
@@ -30,8 +32,21 @@ function App() {
         };
         postWithUserData.push(dataForEachPost);
       }
+      for (let index = 0; index < userData.length; index++) {
+        let dataRelatedToUsers = {
+          author: userData[index].username,
+          bio: userData[index].bio,
+          avatar: userData[index].avatarUrl,
+          joinDate: userData[index].joinDate["localDateTime"],
+          followers: userData[index].followers,
+          following: userData[index].following,
+          postsCount: userData[index].postsCount,
+        };
+        showUserData.push(dataRelatedToUsers);
+      }
 
       setPosts(postWithUserData);
+      setUserData(showUserData);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -44,7 +59,7 @@ function App() {
       </header>
       <main className="main">
         <div className="timeline-container">
-          <Timeline posts={data} />
+          <Timeline posts={data} userData={userData} />
         </div>
       </main>
       <footer className="footer">
