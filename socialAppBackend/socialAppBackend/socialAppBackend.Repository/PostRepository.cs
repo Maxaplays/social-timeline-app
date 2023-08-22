@@ -23,10 +23,22 @@ namespace socialAppBackend.Repository
 
         public List<Dictionary<string, object>> getAllPosts()
         {
-            var query = @"MATCH (p:Post) RETURN p{ description: p.description, likeCount: p.likeCount, timestamp: p.timestamp }";
+            var query = @"MATCH (p:Post) RETURN p{ description: p.description, likeCount: p.likeCount, timestamp: p.timestamp, id: ID(p) }";
             var result = _neo4jDataAccess.ExecuteReadDictionaryAsync(query, "p");
 
             return result.Result;
+        }
+
+        public async Task<bool> postUpdatedLikeCount(int id, int likeCount)
+        {
+            var query = @"MATCH (p:Post) WHERE ID(p) = $id SET p.likeCount = $likeCount RETURN true";
+            IDictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "id", id},
+                    { "likeCount", likeCount }
+                };
+            return await _neo4jDataAccess.ExecuteWriteTransactionAsync<bool>(query, parameters);
+
         }
 
         public Post getPostByUser()

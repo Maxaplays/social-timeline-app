@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Neo4j.Driver;
 using socialAppBackend.Domain.Interface;
+using socialAppBackend.Entity;
+using System.Text;
 
 namespace socialAppBackend.Controllers
 {
@@ -18,5 +21,13 @@ namespace socialAppBackend.Controllers
         {
             return Ok(_postInfrastructure.getAllPosts());
         }
+        [HttpPost]
+        [Route("updateLikeCount")]
+        public async Task<bool> updateLikeCount(int id, int likeCount)
+        {
+            var result = await _postInfrastructure.postUpdatedLikeCount(id, likeCount);
+            return result;
+        }
+
     }
 }

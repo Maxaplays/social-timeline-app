@@ -20,6 +20,11 @@ namespace socialAppBackend.Infrastructure
             return _repository.getAllPosts();
         }
 
+        public Task<bool> postUpdatedLikeCount(int id, int likeCount)
+        {
+            return _repository.postUpdatedLikeCount(id, likeCount);
+        }
+
         public Post getPostbyUser()
         {
             throw new NotImplementedException();

@@ -10,6 +10,7 @@ namespace socialAppBackend.Domain.Interface
     public interface IPostRepository
     {
         public List<Dictionary<string, object>> getAllPosts();
+        public Task<bool> postUpdatedLikeCount(int id, int likeCount);
         public Post getPostByUser();
     }
 }

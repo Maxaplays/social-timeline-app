@@ -22,9 +22,11 @@ function App() {
       const postData = await postResponse.json();
       let postWithUserData = [];
       let showUserData = [];
+      console.log(postData);
 
       for (let index = 0; index < userData.length; index++) {
         let dataForEachPost = {
+          id: postData[index].id,
           content: postData[index].description,
           author: userData[index].username,
           avatar: userData[index].avatarUrl,

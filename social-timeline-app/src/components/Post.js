@@ -4,6 +4,7 @@ import "../styles/Post.scss";
 import Overlay from "./Overlay";
 import Reply from "./Reply";
 import * as IconsOutline from "@heroicons/react/24/outline";
+import axios from "axios";
 
 function calculateTimeSincePost(timestamp) {
   const currentTime = new Date();
@@ -55,7 +56,13 @@ function Post({ post, userData }) {
     const newLikeCount = isLiked ? likeCount - 1 : likeCount + 1;
     setLikeCount(newLikeCount);
     setIsLiked(!isLiked);
-    console.log(`Updated like count: ${newLikeCount}`);
+    try {
+      axios.post(
+        `https://localhost:7005/api/Post/updateLikeCount?id=${post.id}&likeCount=${newLikeCount}`
+      );
+    } catch (error) {
+      console.error("Error updating likeCount:", error);
+    }
   };
 
   const toggleReplySection = () => {
