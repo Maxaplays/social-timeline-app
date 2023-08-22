@@ -35,6 +35,8 @@ function Post({ post, userData }) {
 
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [targetButton, setTargetButton] = useState(null);
+  const [likeCount, setLikeCount] = useState(post.likeCount);
+  const [isLiked, setIsLiked] = useState(false);
 
   const openOverlay = (event) => {
     setIsOverlayOpen(true);
@@ -43,6 +45,13 @@ function Post({ post, userData }) {
 
   const closeOverlay = () => {
     setIsOverlayOpen(false);
+  };
+
+  const handleLike = () => {
+    const newLikeCount = isLiked ? likeCount - 1 : likeCount + 1;
+    setLikeCount(newLikeCount);
+    setIsLiked(!isLiked);
+    console.log(`Updated like count: ${newLikeCount}`);
   };
   const user = userData.find((user) => user.author === post.author);
 
@@ -74,8 +83,8 @@ function Post({ post, userData }) {
         <p>{post.content}</p>
       </div>
       <div className="post-actions">
-        <LikeButton />
-        <span className="like-count">{post.likeCount} likes</span>
+        <LikeButton handleLike={handleLike} isLiked={isLiked} />
+        <span className="like-count">{likeCount} likes</span>
       </div>
     </li>
   );
