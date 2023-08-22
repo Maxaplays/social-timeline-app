@@ -8,11 +8,14 @@
 }
 
 .post-content {
-  font-size: 1.2rem;
+  font-size: $font-size-normal;
 }
 
 .post-actions {
   margin-top: 0.5rem;
+  .post-actions-icons {
+    display: flex;
+  }
   .like-count {
     margin: 10px 3px;
     font-size: $font-size-mini;
@@ -43,4 +46,10 @@
 
 .timestamp {
   font-size: 12px;
+}
+
+.comment-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import LikeButton from "./LikeButton";
 import "../styles/Post.scss";
 import Overlay from "./Overlay";
+import Reply from "./Reply";
+import * as IconsOutline from "@heroicons/react/24/outline";
 
 function calculateTimeSincePost(timestamp) {
   const currentTime = new Date();
@@ -37,6 +39,8 @@ function Post({ post, userData }) {
   const [targetButton, setTargetButton] = useState(null);
   const [likeCount, setLikeCount] = useState(post.likeCount);
   const [isLiked, setIsLiked] = useState(false);
+  const [replies, setReplies] = useState([]);
+  const [isReplyVisible, setIsReplyVisible] = useState(false);
 
   const openOverlay = (event) => {
     setIsOverlayOpen(true);
@@ -53,6 +57,21 @@ function Post({ post, userData }) {
     setIsLiked(!isLiked);
     console.log(`Updated like count: ${newLikeCount}`);
   };
+
+  const toggleReplySection = () => {
+    setIsReplyVisible(!isReplyVisible);
+  };
+
+  const handleReplySubmit = (replyText) => {
+    const newReply = {
+      author: "Luna",
+      content: replyText,
+      timestamp: new Date().toISOString(),
+    };
+
+    setReplies([...replies, newReply]);
+  };
+
   const user = userData.find((user) => user.author === post.author);
 
   return (
@@ -71,10 +90,7 @@ function Post({ post, userData }) {
             onClose={closeOverlay}
             target={targetButton}
             userData={user}
-          >
-            <h2>Overlay Content</h2>
-            <p>This is the content of the overlay.</p>
-          </Overlay>
+          ></Overlay>
           <small>{post.author}</small>
           <span className="dot"></span>
           <span className="timestamp">{timeSincePost}</span>
@@ -83,9 +99,19 @@ function Post({ post, userData }) {
         <p>{post.content}</p>
       </div>
       <div className="post-actions">
-        <LikeButton handleLike={handleLike} isLiked={isLiked} />
+        <div className="post-actions-icons">
+          <LikeButton handleLike={handleLike} isLiked={isLiked} />
+          <IconsOutline.ChatBubbleBottomCenterIcon
+            className="comment-icon"
+            onClick={toggleReplySection}
+          />
+        </div>
+
         <span className="like-count">{likeCount} likes</span>
       </div>
+      {isReplyVisible && (
+        <Reply handleReplySubmit={handleReplySubmit} replies={replies} />
+      )}
     </li>
   );
 }
