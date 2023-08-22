@@ -1,7 +1,7 @@
 @import "variables";
 .header {
   background-color: $primary-color;
-  color: $font-color-light;
+  color: $font-color-darker;
   text-align: left; /* Align the text to the left */
   padding: 1rem;
 
@@ -21,7 +21,7 @@
 }
 
 .app {
-  background-color: $third-color;
+  background-color: $secondary-color;
   font-family: $primary-font-family;
 }
 .main {

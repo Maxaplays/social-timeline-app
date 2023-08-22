@@ -15,7 +15,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   color: $font-color-light;
-  background: linear-gradient(to bottom, $primary-color 50%, $third-color 50%);
+  background: linear-gradient(to bottom, $primary-color 50%, white 50%);
 }
 
 .close-button {
@@ -32,9 +32,10 @@
 .overlay-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: $third-color;
+  background-color: white;
   border-radius: 5px;
   padding: 10px;
+  color: $font-color-darker;
 }
 .overlay-grid-columnA {
   grid-column-start: 1;
@@ -68,5 +69,5 @@
   bottom: 0;
   width: 100%; /* Adjust the value to set the line width */
   height: 1px;
-  background-color: $secondary-color; /* Line color */
+  background-color: $font-color-darker; /* Line color */
 }
