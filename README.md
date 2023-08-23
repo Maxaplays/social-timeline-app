@@ -24,15 +24,17 @@ git clone https://github.com/Maxaplays/social-timeline-app.git
   - Take the data folder located in \database\data from the git clone directory and replace the one in the directory of the database
     - Neo4j Desktop\relate-data\dbmss\<NUMBEROFDATABASE>\data
   - Finally start the database from Neo4JDesktop
-    ####Alternatively you can use docker
+
+#### Alternatively you can use docker
+
 - Get the correct docker image
-- Modify the "--volume" to point to the directory where data is saved
+- Modify the directory of "--volume" in the following command to one you can modify later
 
 ```bash
-docker run --restart always --publish 7474:7474 --publish 7687:7687 --env NEO4J_AUTH=neo4j/abc123456 --volume /DirectoryWhereDataIsSaved/database/data:/data neo4j:latest
+docker run --restart always --publish 7474:7474 --publish 7687:7687 --env NEO4J_AUTH=neo4j/abc123456 --volume /Directory/Where/Data/Is/Saved/example/data:/data neo4j:latest
 ```
 
-- Replace the data with the one cloned
+- Take the data folder located in the directory of (--volume) and replace it with the github clone folder located in: \database\data
 - Start database
 
 ### Backend
